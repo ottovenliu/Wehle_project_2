@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script type="text/javascript">
+
+        function calculate(min, max) {
+            // 請用你的程式補完這個函式的區塊
+
+            var Answer_1 = (max - min + 1) * (min + max) * 0.5
+            return Answer_1
+
+        }
+        var a1_1 = calculate(1, 3); // 你的程式要能夠計算 1+2+3，最後印出 6
+        var a1_2 = calculate(4, 8); // 你的程式要能夠計算 4+5+6+7+8，最後印出 30
+        var A1_area = [a1_1, a1_2];
+        console.log(a1_1, a1_2);
+        alert("ANswer1:  " + A1_area);
+
+        function avg(data) {
+            // 請用你的程式補完這個函式的區塊
+            var total_2 = 0;
+            var times = data["count"];
+            for (var i = 0; i < times; i++) {
+                total_2 += data["employees"][i]["salary"]
+            };
+            var Answer_2 = total_2 / times;
+            console.log(Answer_2);
+            return Answer_2
+        };
+        avg({
+            "count": 3,
+            "employees": [
+                {
+                    "name": "John",
+                    "salary": 30000
+                },
+                {
+                    "name": "Bob",
+                    "salary": 60000
+                },
+                {
+                    "name": "Jenny",
+                    "salary": 50000
+                }
+            ]
+        }); // 呼叫 avg 函式
+        var A2_area = avg({
+            "count": 3,
+            "employees": [
+                {
+                    "name": "John",
+                    "salary": 30000
+                },
+                {
+                    "name": "Bob",
+                    "salary": 60000
+                },
+                {
+                    "name": "Jenny",
+                    "salary": 50000
+                }
+            ]
+        });
+        alert("Answer2 : " + A2_area);
+        function maxProduct(nums) {
+            // 請用你的程式補完這個函式的區塊
+            var area_3 = [];
+            var times = nums.length;
+            for (var i = 0; i < times; i++) {
+                for (var j = 0; j < times; j++) {
+                    var k = nums[i] * nums[j];
+                    if (nums[i] * nums[j] != nums[i] * nums[i]) {
+                        area_3.push(k)
+                    };
+                };
+
+            };
+            console.log(area_3);
+            var Answer_3 = 0;
+            var times = area_3.length;
+            for (var l = 0; l < times; l++) {
+                if (Answer_3 < area_3[l]) {
+                    Answer_3 = area_3[l]
+                };
+            };
+            console.log(Answer_3);
+            return Answer_3
+
+
+        }
+        maxProduct([5, 20, 2, 6]); // 得到 120 因為 20 和 6 相乘得到最大值
+        maxProduct([10, -20, 0, 3]); // 得到 30 因為 10 和 3 相乘得到最大值
+        var a3_1 = maxProduct([5, 20, 2, 6]);
+        var a3_2 = maxProduct([10, -20, 0, 3]);
+        var A3_area = [a3_1, a3_2]
+        alert("Answer3 : " + A3_area)
+
+        function twoSum(nums, target) {
+            // your code here
+            var area_4 = [];
+            var times = nums.length;
+            for (var i = 0; i < times; i++) {
+                for (var j = 0; j < times; j++) {
+                    if (nums[i] + nums[j] == target) {
+                        var a = [nums[i], nums[j]];
+                        area_4.push(a);
+                    }
+                };
+            };
+            console.log(area_4)
+            var b = nums.indexOf(area_4[0][0])
+            console.log(b)
+            var c = nums.indexOf(area_4[0][1])
+            console.log(c)
+            var Answer_4 = [b, c]
+            return Answer_4
+
+
+        }
+        result = twoSum([2, 11, 7, 15], 9)
+        console.log(result) // show [0, 2] because nums[0]+nums[2] is 9
+        alert("ANswer4:  " + result);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
